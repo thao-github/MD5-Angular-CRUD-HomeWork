@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Tour List</h2>
+  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+  <button type="button" class="btn btn-success" routerLink="/tour/create">Add</button>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tour of tours, index as i">
+      <td>{{i + 1}}</td>
+      <td [routerLink]="['tour/view', tour.id]">{{tour.name}}</td>
+      <td>{{tour.price}}</td>
+      <td>{{tour.description}}</td>
+      <td>
+        <button type="button" class="btn btn-warning" [routerLink]="['tour/edit', tour.id]">Edit</button>
+        <button type="button" class="btn btn-danger" [routerLink]="['tour/delete', tour.id]">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

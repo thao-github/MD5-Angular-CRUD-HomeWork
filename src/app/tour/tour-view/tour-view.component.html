@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Tour Information</h2>
+  <form [formGroup]="tourForm">
+    <div class="form-group">
+      <label for="id">Id:</label>
+      <input type="number" class="form-control" id="id" formControlName="id" readonly>
+
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" formControlName="name" readonly>
+
+
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" class="form-control" id="price" formControlName="price" readonly>
+
+
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="text" class="form-control" id="description" formControlName="description" readonly>
+
+
+    </div>
+    <button type="submit" class="btn btn-primary" routerLink="">Back</button>
+  </form>
+</div>
